@@ -16,8 +16,8 @@ class RacingGameTest : StringSpec({
 
         racingGame.race()
 
-        racingGame.record.trackResults shouldHaveSize 5
-        racingGame.record.trackResults.forAll {
+        racingGame.getResults() shouldHaveSize 5
+        racingGame.getResults().forAll {
             it.moveResults shouldHaveSize 3
         }
     }
